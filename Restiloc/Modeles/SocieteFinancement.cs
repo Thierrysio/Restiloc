@@ -51,7 +51,7 @@ namespace Restiloc.Modeles
         #region Methodes
         public  void  AjouterExpertisePool(string dossier, DateTime dateHeure, string lieu,string adresse, string immat, string marque, string modele)
         {
-            this.GetLesExpertises().Add(new Pool_Garage( lieu, adresse, immat, marque, modele, null, dateHeure));
+            this.GetLesExpertises().Add(new Pool_Garage( lieu, adresse, immat, marque, modele, dateHeure));
         }
 
         public List<Expertise> LesExpertisesIndispos()
