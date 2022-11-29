@@ -13,7 +13,7 @@ namespace Restiloc.Modeles
         #endregion
 
         #region constructeurs
-        public Pool_Garage(int codeDossier, string lieuRDV, string adresse, string immatriculation, string marque, string modele, Indisponibilite laIndisponibilite, DateTime dateHeureRDV) : base(codeDossier, lieuRDV, adresse, immatriculation, marque, modele, laIndisponibilite, dateHeureRDV)
+        public Pool_Garage( string lieuRDV, string adresse, string immatriculation, string marque, string modele, DateTime dateHeureRDV) : base( lieuRDV, adresse, immatriculation, marque, modele, dateHeureRDV)
         {
         }
         #endregion

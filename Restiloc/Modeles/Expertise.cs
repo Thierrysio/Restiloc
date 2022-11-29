@@ -22,15 +22,14 @@ namespace Restiloc.Modeles
         #endregion
 
         #region constructeurs
-        public Expertise(int codeDossier, string lieuRDV, string adresse, string immatriculation, string marque, string modele, Indisponibilite laIndisponibilite, DateTime dateHeureRDV)
+        public Expertise( string lieuRDV, string adresse, string immatriculation, string marque, string modele,  DateTime dateHeureRDV)
         {
-            _codeDossier = codeDossier;
+            _codeDossier = Expertise.CollClasse.Count + 1;
             _lieuRDV = lieuRDV;
             _adresse = adresse;
             _immatriculation = immatriculation;
             _marque = marque;
             _modele = modele;
-            _laIndisponibilite = laIndisponibilite;
             _dateHeureRDV = dateHeureRDV;
             CollClasse.Add(this);
         }

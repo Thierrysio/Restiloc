@@ -19,7 +19,7 @@ namespace Restiloc.Modeles
 
         #region constructeurs
 
-        public RDV_Client(string nomContact, string telephone, string mail, int codeDossier, string lieuRDV, string adresse, string immatriculation, string marque, string modele, Indisponibilite laIndisponibilite, DateTime dateHeureRDV) : base(codeDossier, lieuRDV, adresse, immatriculation, marque, modele, laIndisponibilite, dateHeureRDV)
+        public RDV_Client(string nomContact, string telephone, string mail, string lieuRDV, string adresse, string immatriculation, string marque, string modele, DateTime dateHeureRDV) : base( lieuRDV, adresse, immatriculation, marque, modele, dateHeureRDV)
         {
             _nomContact = nomContact;
             _telephone = telephone;
