@@ -21,6 +21,14 @@ namespace Restiloc.Modeles
         #region Getters-Setters
         #endregion
         #region Methodes
+        public override void ChangerEtatExpertiseAbstract()
+        {
+            int x = 10;
+        }
+        public override void ChangerEtatExpertise()
+        {
+            int x = 10;
+        }
         #endregion
 
     }

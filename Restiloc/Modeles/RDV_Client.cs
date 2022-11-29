@@ -42,6 +42,10 @@ namespace Restiloc.Modeles
         }
         #endregion
         #region Methodes
+        public override void ChangerEtatExpertiseAbstract()
+        {
+            string x = "riri";
+        }
         #endregion
     }
 }

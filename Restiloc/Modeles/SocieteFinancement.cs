@@ -70,6 +70,20 @@ namespace Restiloc.Modeles
 
         }
 
+        public int NbIndisponibilites(string param)
+        {
+            int resultat = 0;
+
+            foreach(Expertise uneExpertise in this.LesExpertisesIndispos())
+            {
+                if(uneExpertise.GetLaIndisponibilite().GetMotif().Equals(param))
+                { 
+                    resultat++;
+                }
+            }
+            return resultat;
+        }
+
         #endregion
     }
 }

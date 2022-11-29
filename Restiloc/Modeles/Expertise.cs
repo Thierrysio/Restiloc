@@ -10,6 +10,7 @@ namespace Restiloc.Modeles
     public abstract class Expertise
     {
         #region attributs 
+        private string _etat;
         private int _codeDossier;
         private string _lieuRDV;
         private string _adresse;
@@ -24,6 +25,7 @@ namespace Restiloc.Modeles
         #region constructeurs
         public Expertise( string lieuRDV, string adresse, string immatriculation, string marque, string modele,  DateTime dateHeureRDV)
         {
+            _etat = "A realiser";
             _codeDossier = Expertise.CollClasse.Count + 1;
             _lieuRDV = lieuRDV;
             _adresse = adresse;
@@ -78,6 +80,40 @@ namespace Restiloc.Modeles
         }
         #endregion
         #region Methodes
+
+        public abstract void ChangerEtatExpertiseAbstract();
+        public virtual void ChangerEtatExpertise()
+        {
+            // lorsque cette methodes est appelée elle doit changer d'etat
+            // à la creation de l'expertise elle est par defaut "à réaliser"
+            //si elle est rappelée, elle passe à "En cours"
+            // enfin si elle est rappelée et en état "En cours", elle passe à "Realisee"
+
+            /*if(this._etat.Equals("A Realiser"))
+            {
+                this._etat = "En Cours";
+                return;
+            }
+            if (this._etat.Equals("En Cours"))
+            {
+                this._etat = "Realisee";
+                return;
+            }*/
+            switch (this._etat)
+            {
+                case "A Realiser":
+                    this._etat = "En Cours"; ;
+                    break;
+                case "En Cours":
+                    this._etat = "Realisee"; ;
+                    break;
+  
+                default:
+                    this._etat = "Indisponible";
+                    break;
+            }
+
+        }
         #endregion
     }
 }
