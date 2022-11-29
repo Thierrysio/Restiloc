@@ -80,9 +80,12 @@ namespace Restiloc.Modeles
         }
         #endregion
         #region Methodes
-
+        public void ChangerEtatExpertisepublic()
+        {
+            int x = 23;
+        }
         public abstract void ChangerEtatExpertiseAbstract();
-        public virtual void ChangerEtatExpertise()
+        public virtual void ChangerEtatExpertiseVirtual()
         {
             // lorsque cette methodes est appelée elle doit changer d'etat
             // à la creation de l'expertise elle est par defaut "à réaliser"
